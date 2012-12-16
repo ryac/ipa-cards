@@ -1,21 +1,19 @@
-// node ../../r.js -o app.build.js
+// node ./r.js -o app.build.js
 
 ({
 
+	appDir: '../',
+	baseUrl: 'js/',
 	mainConfigFile: 'main.js',
 	dir: '../../req-test-build',
 
-	optimize: 'none',
+	optimize: 'uglify',
 
 	paths: {
-
+		
 	},
 
-	modules: [
-		//Optimize the application files. jQuery is not 
-		//included since it is already in require-jquery.js
-		{
-			name: 'main'
-		}
-	]
+	modules: [{
+		name: 'main'
+	}]
 })
