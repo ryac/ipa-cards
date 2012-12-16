@@ -1,5 +1,7 @@
+// node ../../r.js -o app.build.js
+
 ({
-	
+
 	mainConfigFile: 'main.js',
 	dir: '../../req-test-build',
 
