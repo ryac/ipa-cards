@@ -1,4 +1,4 @@
-define(['jquery','backbone','models/UserModel'], function($, Backbone, UserModel){
+define(['jquery','backbone'], function($, Backbone){
 
 	var View = Backbone.View.extend({
 

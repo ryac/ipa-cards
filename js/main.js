@@ -15,7 +15,7 @@ requirejs.config({
 
 });
 
-require(['jquery','backbone','routers/DesktopRouter'], function($, Backbone, DesktopRouter) {
-	console.log('in main.js, calling DesktopRouter..');
-	this.router = new DesktopRouter();
+require(['jquery','backbone','routers/IPARouter'], function($, Backbone, IPARouter) {
+	console.log('in main.js, calling IPARouter..');
+	this.router = new IPARouter();
 });

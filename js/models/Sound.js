@@ -1,6 +1,6 @@
 define(['jquery','backbone'], function($, Backbone) {
 
-	var User = Backbone.Model.extend({
+	var Sound = Backbone.Model.extend({
 
 		// Model Constructor
 		initialize: function() {
@@ -8,14 +8,16 @@ define(['jquery','backbone'], function($, Backbone) {
 		},
 
 		defaults: {
-			firstName: '',
-			lastName: '',
-			email: '',
-			phone: ''
+			symbol: '',
+			place: '',
+			manner: '',
+			voice: '',
+			audio: '',
+			more: ''
 		}
 
 	});
 
-	return User;
+	return Sound;
 
 });
