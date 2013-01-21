@@ -4,11 +4,72 @@ body {
   margin: 10px;
   padding: 0;
 }
-h1 {
+p,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
+  padding: 0;
 }
 .main-app {
-  width: 460px;
+  width: 300px;
   height: 600px;
-  background: blue;
+}
+.title {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+}
+.status {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 2px;
+  padding-right: 3px;
+  text-align: right;
+  height: 16px;
+}
+.card-container {
+  width: 300px;
+  height: 200px;
+  background: #ddd;
+}
+.nav {
+  height: 92px;
+}
+.btn {
+  display: block;
+  width: 146px;
+  height: 80px;
+  background: #ccc;
+  margin-top: 6px;
+  color: #333;
+  font-size: 90px;
+  line-height: 66px;
+  text-align: center;
+}
+.btn:hover {
+  background: #703030;
+  color: #fff;
+}
+.btn-prev {
+  float: left;
+}
+.btn-next {
+  float: right;
+}
+.footer {
+  background: #555;
+  color: #ccc;
+  font-size: 10px;
+  padding: 4px;
+}
+.no-sel {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

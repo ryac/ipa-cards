@@ -9,8 +9,29 @@
 	</head>
 	<body>
 	<div id="app" class="main-app">
+		<h1 class="title"><a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">IPA</a> Flash Card App</h1>
+		<div id="status" class="status"></div>
 
+		<div id="card-container" class="card-container"></div>
+		
+		<div id="nav-controls" class="nav">
+			<a class="btn no-sel btn-prev">&laquo;</a>
+			<a class="btn no-sel btn-next">&raquo;</a>
+		</div>
+
+		<div class="footer">Audio source from Wikipedia</div>
 	</div>
+
+	<!-- card template.. -->
+	<script id="card-tmplt" type="text/template">
+		<p>hi</p>
+		<p class="symbol"><%= symbol %></p>
+		<div class="details">
+			<p class="manner"><%= manner %></p>
+		</div>
+	</script>
+
 	<script data-main="js/main" src="js/libs/require.js"></script>
 	</body>
 </html>
+

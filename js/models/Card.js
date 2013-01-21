@@ -1,6 +1,6 @@
 define(['jquery','backbone'], function($, Backbone) {
 
-	var Sound = Backbone.Model.extend({
+	var Card = Backbone.Model.extend({
 
 		// Model Constructor
 		initialize: function() {
@@ -18,6 +18,6 @@ define(['jquery','backbone'], function($, Backbone) {
 
 	});
 
-	return Sound;
+	return Card;
 
 });

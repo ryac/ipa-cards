@@ -5,7 +5,7 @@
 	appDir: '../',
 	baseUrl: 'js/',
 	mainConfigFile: 'main.js',
-	dir: '../../req-test-build',
+	dir: '../../ipa-chart-build',
 
 	optimize: 'uglify',
 

@@ -1,4 +1,4 @@
-define(['jquery','backbone','collections/Sounds'], function($, Backbone, Sounds) {
+define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardPlayerView','views/StatusView'], function($, Backbone, CardPlayer, Cards, CardPlayerView, StatusView) {
 	var IPARouter = Backbone.Router.extend({
 		
 		initialize: function() {
@@ -12,8 +12,22 @@ define(['jquery','backbone','collections/Sounds'], function($, Backbone, Sounds)
 		main: function() {
 			console.log('in IPARouter main..');
 
-			this.sounds = new Sounds(); // the collection..
-			this.sounds.fetch();
+			// single model..
+			this.cardPlayer = new CardPlayer();
+
+			// the collection..
+			this.cards = new Cards();
+
+			// the container view..
+			this.cardPlayerView = new CardPlayerView({
+				collection: this.cards,
+				cardPlayer: this.cardPlayer
+			});
+
+			// the view for the status bar..
+			this.statusView = new StatusView({ model: this.cardPlayer });
+
+			this.cards.fetch();
 
 		}
 
