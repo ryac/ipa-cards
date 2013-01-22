@@ -1,4 +1,4 @@
-define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardPlayerView','views/StatusView'], function($, Backbone, CardPlayer, Cards, CardPlayerView, StatusView) {
+define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardPlayerView','views/StatusView','views/CardView'], function($, Backbone, CardPlayer, Cards, CardPlayerView, StatusView, CardView) {
 	var IPARouter = Backbone.Router.extend({
 		
 		initialize: function() {
@@ -20,6 +20,11 @@ define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardP
 
 			// the container view..
 			this.cardPlayerView = new CardPlayerView({
+				collection: this.cards,
+				cardPlayer: this.cardPlayer
+			});
+
+			this.cardView = new CardView({
 				collection: this.cards,
 				cardPlayer: this.cardPlayer
 			});

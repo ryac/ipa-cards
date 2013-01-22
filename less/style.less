@@ -1,7 +1,7 @@
 // ************************************
 // vars
 @maxWidth: 300px;
-
+@baseColour: #703030;
 // ************************************
 // resets..
 body {
@@ -30,6 +30,11 @@ p, h1, h2, h3, h4 {
 	line-height: 30px;
 	text-align: center;
 	border-bottom: 1px solid #CCC;
+
+	a {
+		color: @baseColour;
+		text-decoration: none;
+	}
 }
 
 .status {
@@ -43,7 +48,7 @@ p, h1, h2, h3, h4 {
 
 .card-container {
 	width: @maxWidth;
-	height: 200px;
+	height: 250px;
 	background: #ddd;
 }
 
@@ -61,10 +66,11 @@ p, h1, h2, h3, h4 {
 	font-size: 90px;
 	line-height: 66px;
 	text-align: center;
+	text-decoration: none;
 }
 
 .btn:hover {
-	background: #703030;
+	background: @baseColour;
 	color: #fff;
 }
 
@@ -83,11 +89,64 @@ p, h1, h2, h3, h4 {
 	padding: 4px;
 }
 
-.no-sel {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.c-front {
+	
+	text-align: center;
+
+	.symbol {
+		font-size: 100px;
+		line-height: 170px;
+	}
+	.btn-reveal {
+		display: block;
+		width: 250px;
+		height: 40px;
+		margin: 10px auto 0;
+		text-decoration: none;
+		line-height: 40px;
+		background: #666;
+		color: #FFF;
+		font-size: 20px;
+		font-weight: 400;
+	}
+	.btn-reveal:hover {
+		background: @baseColour;
+	}
+}
+
+.c-back {
+	display: none;
+
+	.tb {
+		border: none;
+		width: 100%;
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	.tb-title {
+		font-weight: 600;
+		width: 40%;
+	}
+
+	.audio-player {
+		width: 280px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+}
+
+.c-back-footer {
+	margin: 10px;
+	a {
+		color: @baseColour;
+		font-size: 12px;
+		margin-top: 10px;
+	}
+	.btn-hide {
+		float: left;
+	}
+	.btn-more {
+		float: right;
+	}
 }

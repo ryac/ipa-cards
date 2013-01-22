@@ -9,14 +9,14 @@
 	</head>
 	<body>
 	<div id="app" class="main-app">
-		<h1 class="title"><a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">IPA</a> Flash Card App</h1>
+		<h1 class="title"><a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">IPA</a> Flash Cards</h1>
 		<div id="status" class="status"></div>
 
 		<div id="card-container" class="card-container"></div>
 		
 		<div id="nav-controls" class="nav">
-			<a class="btn no-sel btn-prev">&laquo;</a>
-			<a class="btn no-sel btn-next">&raquo;</a>
+			<a class="btn btn-prev" href="#">&laquo;</a>
+			<a class="btn btn-next" href="#">&raquo;</a>
 		</div>
 
 		<div class="footer">Audio source from Wikipedia</div>
@@ -24,13 +24,39 @@
 
 	<!-- card template.. -->
 	<script id="card-tmplt" type="text/template">
-		<p>hi</p>
-		<p class="symbol"><%= symbol %></p>
-		<div class="details">
-			<p class="manner"><%= manner %></p>
+		<div class="c-front">
+			<p class="symbol"><%= symbol %></p>
+			<a class="btn-reveal" href="#">Show Details</a>
+		</div>
+		<div class="c-back">
+			<table class="tb" cellpadding="6" cellspacing="2">
+				<tr>
+					<td class="tb-title">Symbol</td>
+					<td><%= symbol %></td>
+				</tr>
+				<tr>
+					<td class="tb-title">Place</td>
+					<td><%= place %></td>
+				</tr>
+				<tr>
+					<td class="tb-title">Manner</td>
+					<td><%= manner %></td>
+				</tr>
+				<tr>
+					<td class="tb-title">Voice</td>
+					<td><%= voice %></td>
+				</tr>
+			</table>
+			<audio controls class="audio-player">
+				<source src="<%= audio %>" type="audio/ogg">
+				damn..your browser doesnt support audio.
+			</audio>
+			<div class="c-back-footer">
+				<a class="btn-hide" href="#">Hide Details</a>
+				<a class="btn-more" href="<%= more %>" target="_blank">More Info</a>
+			</div>
 		</div>
 	</script>
-
 	<script data-main="js/main" src="js/libs/require.js"></script>
 	</body>
 </html>

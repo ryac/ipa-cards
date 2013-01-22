@@ -22,6 +22,10 @@ h4 {
   text-align: center;
   border-bottom: 1px solid #CCC;
 }
+.title a {
+  color: #703030;
+  text-decoration: none;
+}
 .status {
   font-size: 12px;
   line-height: 16px;
@@ -32,7 +36,7 @@ h4 {
 }
 .card-container {
   width: 300px;
-  height: 200px;
+  height: 250px;
   background: #ddd;
 }
 .nav {
@@ -48,6 +52,7 @@ h4 {
   font-size: 90px;
   line-height: 66px;
   text-align: center;
+  text-decoration: none;
 }
 .btn:hover {
   background: #703030;
@@ -65,11 +70,57 @@ h4 {
   font-size: 10px;
   padding: 4px;
 }
-.no-sel {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.c-front {
+  text-align: center;
+}
+.c-front .symbol {
+  font-size: 100px;
+  line-height: 170px;
+}
+.c-front .btn-reveal {
+  display: block;
+  width: 250px;
+  height: 40px;
+  margin: 10px auto 0;
+  text-decoration: none;
+  line-height: 40px;
+  background: #666;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+}
+.c-front .btn-reveal:hover {
+  background: #703030;
+}
+.c-back {
+  display: none;
+}
+.c-back .tb {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.c-back .tb-title {
+  font-weight: 600;
+  width: 40%;
+}
+.c-back .audio-player {
+  width: 280px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.c-back-footer {
+  margin: 10px;
+}
+.c-back-footer a {
+  color: #703030;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.c-back-footer .btn-hide {
+  float: left;
+}
+.c-back-footer .btn-more {
+  float: right;
 }

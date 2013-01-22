@@ -5,39 +5,40 @@ define(['jquery','backbone'], function($, Backbone){
 		el: $('#nav-controls'),
 
 		initialize: function() {
-			_.bindAll(this, 'maxCards');
+			// _.bindAll(this, 'updateCard');
 			this.collection.bind('reset', this.render, this);
 
 			this.cardPlayer = this.options.cardPlayer;
-			this.cardPlayer.bind('change:maxCards', this.maxCards); // dont need, just for testing..
+			// this.cardPlayer.bind('change:currentIndex', this.updateCard);
 		},
 
 		events: {
 			'click .btn-prev': 'cardPrev',
-			'click .btn-next': 'cardNext',
+			'click .btn-next': 'cardNext'
 		},
 
 		render: function() {
-			this.cardPlayer.set('maxCards', this.collection.length);
-			this.collection.shuffle();
-			console.log(this.collection.at(0).get('symbol'));
-			this.cardPlayer.loadCard(1880);
+			// this.cardPlayer.set('maxCards', this.collection.length);
+			this.collection.models = _.shuffle(this.collection.models);
+			this.cardPlayer.init(this.collection.length);
+			// console.dir(this.collection.models);
 			// console.log(this.collection.length);
 			// $(this.el).append('<p>hi</p>');
 			return this;
 		},
 
-		cardNext: function() {
+		cardNext: function(e) {
+			e.preventDefault();
 			this.cardPlayer.nextSlide();
 		},
 
-		cardPrev: function() {
+		cardPrev: function(e) {
+			e.preventDefault();
 			this.cardPlayer.prevSlide();
 		},
 
-		maxCards: function(u) {
-			// console.log('whoo!', u.get('maxCards'));
-			console.log('whoo!', this.cardPlayer.get('maxCards'));
+		updateCard: function() {
+			console.log('whoo!', this.cardPlayer.get('currentIndex'));
 		}
 
 	});
