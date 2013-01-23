@@ -14,7 +14,6 @@ h4 {
 }
 .main-app {
   width: 300px;
-  height: 600px;
 }
 .title {
   font-size: 18px;
@@ -69,6 +68,14 @@ h4 {
   color: #ccc;
   font-size: 10px;
   padding: 4px;
+  float: left;
+  width: 292px;
+}
+.wiki-note {
+  float: left;
+}
+.cc {
+  float: right;
 }
 .c-front {
   text-align: center;
