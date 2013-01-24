@@ -1,7 +1,7 @@
-define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardPlayerView','views/StatusView','views/CardView'], function($, Backbone, CardPlayer, Cards, CardPlayerView, StatusView, CardView) {
+define(['jquery', 'backbone', 'models/CardPlayer', 'collections/Cards', 'views/CardPlayerView', 'views/StatusView', 'views/CardView'], function ($, Backbone, CardPlayer, Cards, CardPlayerView, StatusView, CardView) {
 	var IPARouter = Backbone.Router.extend({
 		
-		initialize: function() {
+		initialize: function () {
 			Backbone.history.start();
 		},
 
@@ -9,7 +9,7 @@ define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardP
 			'': 'main'
 		},
 
-		main: function() {
+		main: function () {
 			// console.log('in IPARouter main..');
 
 			// single model..

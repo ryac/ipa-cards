@@ -30,13 +30,17 @@ define(['jquery', 'backbone'], function ($, Backbone) {
 		nextSlide: function () {
 			// console.log('next..', this.get('currentIndex'));
 			var c = this.get('currentIndex') + 1;
-			if (c >= this.get('maxCards')) c = 0;
+			if (c >= this.get('maxCards')) {
+				c = 0;
+			}
 			this.set('currentIndex', c);
 		},
 
 		prevSlide: function () {
 			var c = this.get('currentIndex') - 1;
-			if (c < 0) c = this.get('maxCards') - 1;
+			if (c < 0) {
+				c = this.get('maxCards') - 1;
+			}
 			this.set('currentIndex', c);
 		}
 

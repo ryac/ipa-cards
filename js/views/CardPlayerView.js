@@ -1,10 +1,10 @@
-define(['jquery','backbone'], function($, Backbone){
+define(['jquery', 'backbone'], function ($, Backbone) {
 
 	var CardPlayerView = Backbone.View.extend({
 
 		el: $('#nav-controls'),
 
-		initialize: function() {
+		initialize: function () {
 			this.collection.bind('reset', this.render, this);
 			this.cardPlayer = this.options.cardPlayer;
 		},
@@ -14,7 +14,7 @@ define(['jquery','backbone'], function($, Backbone){
 			'click .btn-next': 'cardNext'
 		},
 
-		render: function() {
+		render: function () {
 			// this.cardPlayer.set('maxCards', this.collection.length);
 			this.collection.models = _.shuffle(this.collection.models);
 			this.cardPlayer.init(this.collection.length);
@@ -24,12 +24,12 @@ define(['jquery','backbone'], function($, Backbone){
 			return this;
 		},
 
-		cardNext: function(e) {
+		cardNext: function (e) {
 			e.preventDefault();
 			this.cardPlayer.nextSlide();
 		},
 
-		cardPrev: function(e) {
+		cardPrev: function (e) {
 			e.preventDefault();
 			this.cardPlayer.prevSlide();
 		}
