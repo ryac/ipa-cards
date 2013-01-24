@@ -5,11 +5,8 @@ define(['jquery','backbone'], function($, Backbone){
 		el: $('#nav-controls'),
 
 		initialize: function() {
-			// _.bindAll(this, 'updateCard');
 			this.collection.bind('reset', this.render, this);
-
 			this.cardPlayer = this.options.cardPlayer;
-			// this.cardPlayer.bind('change:currentIndex', this.updateCard);
 		},
 
 		events: {
@@ -35,10 +32,6 @@ define(['jquery','backbone'], function($, Backbone){
 		cardPrev: function(e) {
 			e.preventDefault();
 			this.cardPlayer.prevSlide();
-		},
-
-		updateCard: function() {
-			console.log('whoo!', this.cardPlayer.get('currentIndex'));
 		}
 
 	});

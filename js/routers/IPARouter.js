@@ -10,7 +10,7 @@ define(['jquery','backbone','models/CardPlayer','collections/Cards','views/CardP
 		},
 
 		main: function() {
-			console.log('in IPARouter main..');
+			// console.log('in IPARouter main..');
 
 			// single model..
 			this.cardPlayer = new CardPlayer();

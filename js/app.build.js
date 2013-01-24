@@ -5,7 +5,7 @@
 	appDir: '../',
 	baseUrl: 'js/',
 	mainConfigFile: 'main.js',
-	dir: '../../ipa-chart-build',
+	dir: '../../ipa-cards-build',
 
 	optimize: 'uglify',
 

@@ -16,6 +16,6 @@ requirejs.config({
 });
 
 require(['jquery','backbone','routers/IPARouter'], function($, Backbone, IPARouter) {
-	console.log('in main.js, calling IPARouter..');
+	// console.log('in main.js, calling IPARouter..');
 	this.router = new IPARouter();
 });

@@ -24,7 +24,7 @@ define(['jquery','backbone'], function($, Backbone){
 		updateCard: function() {
 			var index = this.cardPlayer.get('currentIndex');
 			var cardModel = this.collection.at(index);
-			console.log('CardView -->', cardModel);
+			// console.log('CardView -->', cardModel);
 			// $(this.el).html(cardModel.get('symbol'));
 			$(this.el).html(this.template(cardModel.toJSON()));
 		},

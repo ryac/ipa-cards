@@ -1,14 +1,16 @@
-define(['jquery','backbone', 'models/Card'], function($, Backbone, Card) {
+define(['jquery', 'backbone', 'models/Card'], function ($, Backbone, Card) {
+
+	'use strict';
 
 	var Cards = Backbone.Collection.extend({
 
 		// Collections Constructor
-		initialize: function() {
+		initialize: function () {
 
 		},
 
 		// reset: function() {
-		// 	console.log('Cards reset..');
+		// console.log('Cards reset..');
 		// },
 
 		model: Card,

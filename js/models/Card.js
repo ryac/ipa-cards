@@ -1,9 +1,11 @@
-define(['jquery','backbone'], function($, Backbone) {
+define(['jquery', 'backbone'], function ($, Backbone) {
+
+	'use strict';
 
 	var Card = Backbone.Model.extend({
 
 		// Model Constructor
-		initialize: function() {
+		initialize: function () {
 
 		},
 

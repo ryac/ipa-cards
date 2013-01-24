@@ -180,7 +180,7 @@ $arr = array(
 			'more' => 'http://en.wikipedia.org/wiki/Alveolar_approximant'),
 
 	array(	'symbol' => 'w',
-			'place' => 'Bilabial (or Labialized Velar?)',
+			'place' => 'Bilabial / Labialized Velar',
 			'manner' => 'Approximants (Glides)',
 			'voice' => '+V',
 			'audio' => 'http://upload.wikimedia.org/wikipedia/commons/f/f2/Voiced_labio-velar_approximant.ogg',
